@@ -1,0 +1,73 @@
+<!-- 文章页模板 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/5.2.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/5.1.0/github-markdown.min.css">
+<style>
+    .apee-wodemo-main~* {
+        display: none !important;
+    }
+
+    a[role="button"] {
+        text-decoration: none;
+    }
+
+    .nav-hide {
+        display: none;
+    }
+</style>
+<div class="apee-wodemo-main">
+    <nav class="navbar navbar-dark navbar-expand bg-success shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">鹏优创 2023</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">主页</a>
+                    </li>
+                    <li class="nav-item publish nav-hide">
+                        <a class="nav-link" href="https://s.wodemo.com/admin/site/compose">发布文章</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item login nav-hide">
+                        <a class="nav-link">登录</a>
+                    </li>
+                    <li class="nav-item admin nav-hide">
+                        <a class="nav-link">控制台</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-4">
+        <h2>{wo.entry.title}</h2>
+        <p class="text-muted">
+            发布时间：
+            <script>
+                document.write(new Date(parseInt('{wo.entry.creation.timestamp}000')).toLocaleString())
+            </script>
+        </p>
+        <div class="markdown-body">
+            {wo.entry.main}
+        </div>
+    </div>
+</div>
+<script>
+    window.onload = function () {
+        document.body.ondragstart = () => { return false }
+        const ele_loginA = document.querySelector('.apee-wodemo-main~a[href*="/login"]')
+        if (ele_loginA) {
+            const ele_btnLogin = document.querySelector('.nav-item.login')
+            const ele_btnLoginA = ele_btnLogin.querySelector('a')
+            ele_btnLogin.style.display = 'inline-block'
+            ele_btnLoginA.setAttribute('href', ele_loginA.getAttribute('href'))
+        }
+        const ele_adminA = document.querySelector('.apee-wodemo-main~a[href*="/admin"]')
+        if (ele_adminA) {
+            const ele_btnAdmin = document.querySelector('.nav-item.admin')
+            const ele_btnAdminA = ele_btnAdmin.querySelector('a')
+            ele_btnAdmin.style.display = 'inline-block'
+            ele_btnAdminA.setAttribute('href', ele_adminA.getAttribute('href'))
+            document.querySelector('.nav-item.publish').style.display = 'inline-block'
+        }
+    }
+</script>
