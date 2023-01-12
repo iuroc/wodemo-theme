@@ -13,6 +13,7 @@
 ## 主题代码
 
 - 主页模板：`home.html`
+- 文章页模板：`page.html`
 - 主页列表模板
     ```
     {wo.entry.title}
