@@ -2,6 +2,8 @@
 
 > Bootstrap 风格的 Wodemo 主题
 
+![](./image.png)
+
 ## 项目信息
 
 - 作者：欧阳鹏
