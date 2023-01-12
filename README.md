@@ -12,6 +12,8 @@
 
 ## 主题代码
 
+打开[站点设置](https://s.wodemo.com/admin/site)，点击 Templates 进入设置。
+
 - 主页模板：[`home.html`](./home.html)
 - 文章页模板：[`page.html`](./page.html)
 - 主页列表模板
