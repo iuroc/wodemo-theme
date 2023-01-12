@@ -13,6 +13,11 @@
     .nav-hide {
         display: none;
     }
+
+    * {
+        word-wrap: break-word;
+        word-break: break-all;
+    }
 </style>
 <div class="apee-wodemo-main">
     <nav class="navbar navbar-dark navbar-expand bg-success shadow-sm sticky-top">
@@ -24,7 +29,10 @@
                         <a class="nav-link active" aria-current="page" href="/">主页</a>
                     </li>
                     <li class="nav-item publish nav-hide">
-                        <a class="nav-link" href="https://s.wodemo.com/admin/site/compose">发布文章</a>
+                        <a class="nav-link" href="https://s.wodemo.com/admin/site/compose">发布</a>
+                    </li>
+                    <li class="nav-item update nav-hide">
+                        <a class="nav-link">编辑</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -46,7 +54,7 @@
                 document.write(new Date(parseInt('{wo.entry.creation.timestamp}000')).toLocaleString())
             </script>
         </p>
-        <div class="markdown-body">
+        <div class="markdown-body mb-3">
             {wo.entry.main}
         </div>
     </div>
@@ -68,6 +76,8 @@
             ele_btnAdmin.style.display = 'inline-block'
             ele_btnAdminA.setAttribute('href', ele_adminA.getAttribute('href'))
             document.querySelector('.nav-item.publish').style.display = 'inline-block'
+            document.querySelector('.nav-item.update').style.display = 'inline-block'
+            document.querySelector('.nav-item.update a').setAttribute('href', 'https://s.wodemo.com/admin/site/compose?id=' + location.href.split('/').pop())
         }
     }
 </script>

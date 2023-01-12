@@ -17,7 +17,7 @@
 - 主页列表模板
     ```
     {wo.entry.title}
-    {wo.entry.creation.datestr.ymd}
+    {wo.entry.creation.timestamp}
     {wo.entry.url}
     ```
 - 站点底部 JavaScript

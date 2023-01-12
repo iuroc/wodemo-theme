@@ -12,6 +12,11 @@
     .nav-hide {
         display: none;
     }
+
+    * {
+        word-wrap: break-word;
+        word-break: break-all;
+    }
 </style>
 <div class="apee-wodemo-main">
     <nav class="navbar navbar-dark navbar-expand bg-success shadow-sm sticky-top">
@@ -23,7 +28,7 @@
                         <a class="nav-link active" aria-current="page" href="/">主页</a>
                     </li>
                     <li class="nav-item publish nav-hide">
-                        <a class="nav-link" href="https://s.wodemo.com/admin/site/compose">发布文章</a>
+                        <a class="nav-link" href="https://s.wodemo.com/admin/site/compose">发布</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav">
@@ -62,7 +67,7 @@
         <div class="col-md-6 col-lg-4 mb-3">
             <a class="card card-body shadow-sm h-100" role="button" href="${url}">
                 <h5>${title}</h5>
-                <div>${timeStr}</div>
+                <div class="text-muted">发布时间：${new Date(parseInt(timeStr) * 1000).toLocaleString()}</div>
             </a>
         </div>
         `
