@@ -20,10 +20,6 @@
     {wo.entry.creation.timestamp}
     {wo.entry.url}
     ```
-- 站点底部 JavaScript
-    ```js
-    document.body.ondragstart = () => { return false }
-    ```
 
 ## 我的磨快速清空默认模板
 
