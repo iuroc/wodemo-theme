@@ -1,0 +1,54 @@
+<!-- 主页模板 -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/bootstrap/5.2.3/css/bootstrap.min.css">
+<style>
+    .apee-wodemo-main~* {
+        display: none !important;
+    }
+
+    a[role="button"] {
+        text-decoration: none;
+    }
+
+    .nav-hide {
+        display: none;
+    }
+
+    * {
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+</style>
+<div class="apee-wodemo-main">
+    <nav class="navbar navbar-dark navbar-expand bg-success shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">鹏优创 2023</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">主页</a>
+                    </li>
+                    <li class="nav-item publish nav-hide">
+                        <a class="nav-link" href="https://s.wodemo.com/admin/site/compose">发布</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item login nav-hide">
+                        <a class="nav-link">登录</a>
+                    </li>
+                    <li class="nav-item admin nav-hide">
+                        <a class="nav-link">控制台</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container py-4">
+        <div style="display: none;">
+            {wo.site.entries}
+        </div>
+        <div class="row article-list">
+
+        </div>
+    </div>
+</div>
