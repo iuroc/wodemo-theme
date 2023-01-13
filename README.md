@@ -49,3 +49,11 @@ npm run build
 👉 主页模板：/dist/home.html
 👉 文章页模板：/dist/page.html
 ```
+
+## 主题开发说明
+
+- 主页模板的 HTML 代码放在 `/html/home.html` 中
+- 文章页模板的 HTML 代码放在 `/html/page.html` 中
+- 主页模板的 JavaScript 脚本代码 `js/home.ts` 中
+- 文章页模板的 JavaScript 脚本代码放在 `js/page.ts` 中
+- 本项目要求 TypeScript 开发
