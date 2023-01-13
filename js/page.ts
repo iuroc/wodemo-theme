@@ -15,7 +15,7 @@ window.onload = function () {
         if (ele_btnAdminA) ele_btnAdminA.setAttribute('href', ele_adminA.getAttribute('href') || '')
         const ele_publish = document.querySelector<HTMLElement>('.nav-item.publish')
         if (ele_publish) ele_publish.style.display = 'inline-block'
-        const ele_update = document.querySelector<HTMLElement>('.nav-item.publish')
+        const ele_update = document.querySelector<HTMLElement>('.nav-item.update')
         if (ele_update) ele_update.style.display = 'inline-block'
         const ele_updateA = document.querySelector<HTMLElement>('.nav-item.update a')
         if (ele_updateA) ele_updateA.setAttribute('href', 'https://s.wodemo.com/admin/site/compose?id=' + location.href.split('/').pop())
