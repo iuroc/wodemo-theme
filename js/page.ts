@@ -13,7 +13,11 @@ window.onload = function () {
         const ele_btnAdminA = ele_btnAdmin?.querySelector<HTMLElement>('a')
         if (ele_btnAdmin) ele_btnAdmin.style.display = 'inline-block'
         if (ele_btnAdminA) ele_btnAdminA.setAttribute('href', ele_adminA.getAttribute('href') || '')
-        const ele_public = document.querySelector<HTMLElement>('.nav-item.publish')
-        if (ele_public) ele_public.style.display = 'inline-block'
+        const ele_publish = document.querySelector<HTMLElement>('.nav-item.publish')
+        if (ele_publish) ele_publish.style.display = 'inline-block'
+        const ele_update = document.querySelector<HTMLElement>('.nav-item.publish')
+        if (ele_update) ele_update.style.display = 'inline-block'
+        const ele_updateA = document.querySelector<HTMLElement>('.nav-item.update a')
+        if (ele_updateA) ele_updateA.setAttribute('href', 'https://s.wodemo.com/admin/site/compose?id=' + location.href.split('/').pop())
     }
 }
